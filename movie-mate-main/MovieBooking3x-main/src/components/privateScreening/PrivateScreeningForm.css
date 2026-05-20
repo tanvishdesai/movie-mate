@@ -1,0 +1,138 @@
+.private-screening-form-container {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.private-screening-form-header {
+  background-color: #2b3148;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.private-screening-form-header h2 {
+  margin: 0 0 10px 0;
+  font-size: 24px;
+}
+
+.private-screening-form-header h3 {
+  margin: 0;
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+.private-screening-form {
+  padding: 25px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.form-group small {
+  display: block;
+  margin-top: 5px;
+  color: #666;
+  font-size: 12px;
+}
+
+.private-screening-notes {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.private-screening-notes h4 {
+  margin: 0 0 10px 0;
+  color: #333;
+}
+
+.private-screening-notes ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.private-screening-notes li {
+  margin-bottom: 5px;
+  color: #555;
+  font-size: 14px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.form-actions button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.form-actions .cancel-btn {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.form-actions .cancel-btn:hover {
+  background-color: #d0d0d0;
+}
+
+.form-actions .submit-btn {
+  background-color: #f84464;
+  color: white;
+}
+
+.form-actions .submit-btn:hover {
+  background-color: #e02f4f;
+  transform: translateY(-2px);
+}
+
+.form-actions button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+@media (max-width: 768px) {
+  .private-screening-form-container {
+    width: 95%;
+  }
+  
+  .form-actions {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .form-actions button {
+    width: 100%;
+  }
+} 

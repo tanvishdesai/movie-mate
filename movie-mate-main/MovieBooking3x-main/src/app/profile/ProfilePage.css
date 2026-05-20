@@ -1,0 +1,198 @@
+.profile {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.head {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.user-section {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.user h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #2b3148;
+}
+
+.details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.detail {
+    flex: 1 1 200px;
+    min-width: 200px;
+}
+
+.detail h3, .detail h4 {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.detail p {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Profile tabs */
+.profile-tabs {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.profile-tabs button {
+    padding: 12px 20px;
+    border: none;
+    background: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #666;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.profile-tabs button:hover {
+    color: #f84464;
+}
+
+.profile-tabs button.active {
+    color: #f84464;
+    border-bottom-color: #f84464;
+}
+
+/* Bookings section */
+.bookings, .private-screenings {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.bookings h2, .private-screenings h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #2b3148;
+}
+
+.booking, .private-screening {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.booking-header, .screening-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.booking-header h3, .screening-header h3 {
+    font-size: 18px;
+    color: #2b3148;
+    margin: 0;
+}
+
+.booking-date {
+    font-size: 14px;
+    color: #666;
+}
+
+.booking-details, .screening-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* Private screening specific styles */
+.screening-status {
+    font-size: 12px;
+    font-weight: 600;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.admin-message {
+    flex-basis: 100%;
+    background-color: #f0f8ff;
+    padding: 10px;
+    border-radius: 4px;
+    border-left: 3px solid #0275d8;
+}
+
+.payment-action {
+    flex-basis: 100%;
+    margin-top: 10px;
+}
+
+.pay-now-btn {
+    background-color: #f84464;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.pay-now-btn:hover {
+    background-color: #e02f4f;
+}
+
+.no-bookings, .no-screenings {
+    text-align: center;
+    padding: 30px;
+    color: #666;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .profile {
+        padding: 10px;
+    }
+    
+    .profile-tabs {
+        flex-direction: column;
+    }
+    
+    .profile-tabs button {
+        width: 100%;
+        text-align: center;
+        padding: 15px;
+        border-bottom: none;
+        border-left: 3px solid transparent;
+    }
+    
+    .profile-tabs button.active {
+        border-bottom: none;
+        border-left: 3px solid #f84464;
+        background-color: rgba(248, 68, 100, 0.05);
+    }
+    
+    .booking-header, .screening-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .booking-date, .screening-status {
+        margin-top: 8px;
+    }
+}
+  

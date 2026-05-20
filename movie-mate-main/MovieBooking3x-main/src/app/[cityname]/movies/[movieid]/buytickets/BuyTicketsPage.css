@@ -1,0 +1,389 @@
+/* Base styles */
+:root {
+  --primary-color: #ff3566;
+  --secondary-color: #1a1a1a;
+  --text-color: #333;
+  --light-gray: #f5f5f5;
+  --gray: #aaa;
+  --border-radius: 8px;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+/* Main container */
+.buytickets-container {
+  background-color: var(--light-gray);
+  min-height: 100vh;
+  width: 100%;
+  padding-bottom: 30px;
+}
+
+/* Movie header */
+.movie-header {
+  background: linear-gradient(to right, var(--secondary-color), #444);
+  padding: 2rem;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.movie-info h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.genre-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.genre-tag {
+  padding: 5px 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.duration {
+  display: flex;
+  align-items: center;
+  color: var(--gray);
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+/* Date selection section */
+.date-selection-section {
+  background-color: white;
+  padding: 1.5rem;
+  margin: 0 auto 20px;
+  width: 90%;
+  max-width: 1200px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+.date-selection-section h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+/* Custom date selector */
+.custom-date-selector {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  padding: 5px 0;
+  scrollbar-width: thin;
+}
+
+.date-option {
+  min-width: 80px;
+  height: 90px;
+  border-radius: var(--border-radius);
+  background-color: var(--light-gray);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+  user-select: none;
+  padding: 10px;
+}
+
+.date-option:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.date-option.active {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.day-name {
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.date-number {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.month-name {
+  font-size: 0.8rem;
+}
+
+/* Theatres section */
+.theatres-section {
+  background-color: white;
+  padding: 1.5rem;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1200px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+.theatres-section h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+.theatres-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.theatre-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
+}
+
+.theatre-card:hover {
+  background-color: var(--light-gray);
+}
+
+.theatre-card:last-child {
+  border-bottom: none;
+}
+
+.theatre-info h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: var(--text-color);
+}
+
+.theatre-info p {
+  color: var(--gray);
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.amenities {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.amenity {
+  font-size: 0.7rem;
+  color: var(--gray);
+  background-color: var(--light-gray);
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.select-btn {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 8px 20px;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.select-btn:hover {
+  background-color: #e02e5a;
+  transform: translateY(-2px);
+}
+
+/* No theatres message */
+.no-theatres {
+  text-align: center;
+  padding: 2rem;
+  color: var(--gray);
+}
+
+.no-theatres i {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Loading states */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  color: var(--gray);
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top-color: var(--primary-color);
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .movie-header {
+    padding: 1.5rem 1rem;
+  }
+  
+  .movie-info h1 {
+    font-size: 1.5rem;
+  }
+  
+  .date-selection-section,
+  .theatres-section {
+    width: 95%;
+    padding: 1rem;
+  }
+  
+  .theatre-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 1rem;
+  }
+  
+  .select-btn {
+    align-self: stretch;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .theatres-list {
+    gap: 12px;
+  }
+  
+  .day-name, .month-name {
+    font-size: 0.75rem;
+  }
+  
+  .custom-date-selector {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+  }
+  
+  .genre-tags {
+    margin: 8px 0;
+  }
+  
+  .genre-tag {
+    padding: 4px 10px;
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .date-option {
+    min-width: 70px;
+    height: 80px;
+    padding: 8px;
+  }
+  
+  .date-number {
+    font-size: 1.2rem;
+  }
+  
+  .amenities {
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 8px;
+  }
+  
+  .movie-header {
+    padding: 1rem;
+  }
+  
+  .movie-info h1 {
+    font-size: 1.3rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  .theatre-info h3 {
+    font-size: 1rem;
+  }
+  
+  .theatre-info p {
+    font-size: 0.8rem;
+    margin-bottom: 8px;
+  }
+  
+  .theatres-section h2,
+  .date-selection-section h2 {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .select-btn {
+    padding: 8px 15px;
+    font-size: 0.85rem;
+  }
+  
+  .buytickets-container {
+    padding-bottom: 20px;
+  }
+  
+  .custom-date-selector::-webkit-scrollbar {
+    height: 3px;
+  }
+  
+  .custom-date-selector::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 3px;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 360px) {
+  .date-option {
+    min-width: 60px;
+    height: 70px;
+  }
+  
+  .date-number {
+    font-size: 1rem;
+  }
+  
+  .day-name, .month-name {
+    font-size: 0.7rem;
+  }
+  
+  .amenity {
+    font-size: 0.65rem;
+    padding: 2px 6px;
+  }
+  
+  .theatre-info h3 {
+    font-size: 0.9rem;
+  }
+  
+  .theatre-info p {
+    font-size: 0.75rem;
+  }
+}

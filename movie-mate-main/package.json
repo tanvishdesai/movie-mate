@@ -1,0 +1,20 @@
+{
+  "name": "movie-booking-workspace",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "install-all": "concurrently \"cd MovieBooking3x-main && npm install\" \"cd MovieBooking3x_Admin-main && npm install\" \"cd MovieBooking3x_Backend-main && npm install\"",
+    "dev": "concurrently \"cd MovieBooking3x_Backend-main && npm run dev\" \"cd MovieBooking3x-main && npm run dev\" \"cd MovieBooking3x_Admin-main && npm run dev\"",
+    "dev:backend": "cd MovieBooking3x_Backend-main && npm run dev",
+    "dev:frontend": "cd MovieBooking3x-main && npm run dev",
+    "dev:admin": "cd MovieBooking3x_Admin-main && npm run dev"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "@types/three": "^0.174.0",
+    "date-fns": "^4.1.0",
+    "three": "^0.174.0"
+  }
+}

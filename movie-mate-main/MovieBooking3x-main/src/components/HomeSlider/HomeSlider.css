@@ -1,0 +1,189 @@
+/* HomeSlider component styles */
+.home-slider-container {
+  position: relative;
+  width: 100%;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+/* Main Slider */
+.banner-swiper {
+  width: 100%;
+}
+
+/* Banner wrapper */
+.banner-wrapper {
+  width: 100%;
+}
+
+/* Banner slide with background image */
+.banner-slide {
+  position: relative;
+  width: 100%;
+  height: 400px; /* Fixed height for desktop */
+  background-color: #000;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Content overlay */
+.banner-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 5%;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.4) 40%,
+    rgba(0, 0, 0, 0.1) 70%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+/* Banner text */
+.banner-content h2 {
+  font-size: 2.25rem; /* 36px */
+  font-weight: 700;
+  color: white;
+  margin-bottom: 12px;
+  max-width: 500px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.banner-content p {
+  font-size: 1.125rem; /* 18px */
+  color: white;
+  margin-bottom: 24px;
+  max-width: 500px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* Action button */
+.banner-button {
+  display: inline-block;
+  background-color: var(--primary-color, #e91e63);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 24px;
+  font-size: 1rem; /* 16px */
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  width: fit-content;
+}
+
+.banner-button:hover {
+  background-color: #c2185b;
+  transform: translateY(-2px);
+}
+
+/* Navigation & Pagination */
+.banner-swiper .swiper-button-next,
+.banner-swiper .swiper-button-prev {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-swiper .swiper-button-next:after,
+.banner-swiper .swiper-button-prev:after {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.banner-swiper .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: white;
+  opacity: 0.7;
+}
+
+.banner-swiper .swiper-pagination-bullet-active {
+  background: var(--primary-color, #e91e63);
+  opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .banner-slide {
+    height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner-slide {
+    height: 300px;
+  }
+  
+  .banner-content h2 {
+    font-size: 1.75rem; /* 28px */
+  }
+  
+  .banner-content p {
+    font-size: 1rem; /* 16px */
+  }
+  
+  .banner-button {
+    padding: 10px 20px;
+    font-size: 0.875rem; /* 14px */
+  }
+  
+  .banner-content {
+    background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(0, 0, 0, 0.6) 50%,
+      rgba(0, 0, 0, 0.4) 100%
+    );
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-slide {
+    height: 250px;
+  }
+  
+  .banner-content {
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.2) 0%,
+      rgba(0, 0, 0, 0.6) 50%,
+      rgba(0, 0, 0, 0.9) 100%
+    );
+    justify-content: flex-end;
+    padding-bottom: 40px;
+    align-items: center;
+    text-align: center;
+    padding-left: 0;
+  }
+  
+  .banner-content h2 {
+    font-size: 1.375rem; /* 22px */
+    max-width: 320px;
+  }
+  
+  .banner-content p {
+    font-size: 0.875rem; /* 14px */
+    max-width: 320px;
+    margin-bottom: 16px;
+  }
+  
+  .banner-button {
+    width: 80%;
+    text-align: center;
+  }
+} 
